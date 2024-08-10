@@ -2,8 +2,9 @@ import { useState, useEffect, useCallback, memo } from "react";
 import { chars } from "../chars";
 
 export const Roulette = memo(() => {
+  const choiceIndex = () => Math.floor(Math.random() * chars.length);
   const [start, setStart] = useState(false);
-  const [index, setIndex] = useState(Math.floor(Math.random() * chars.length));
+  const [index, setIndex] = useState(() => choiceIndex());
 
   //ボタンの文言を変更する処理
   const startRoulette = useCallback(() => {
@@ -14,8 +15,9 @@ export const Roulette = memo(() => {
   useEffect(() => {
     if (start) {
       const interval = setInterval(() => {
-        setIndex((oldIndex) => {
-          if (oldIndex < chars.length - 1) return oldIndex + 1;
+        setIndex(() => {
+          const newIndex = choiceIndex();
+          if (newIndex < chars.length - 1) return newIndex + 1;
           return 0;
         });
       }, 50); //ルーレットの中身を切り替える速度

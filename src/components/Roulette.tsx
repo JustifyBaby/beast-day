@@ -15,11 +15,7 @@ export const Roulette = memo(() => {
   useEffect(() => {
     if (start) {
       const interval = setInterval(() => {
-        setIndex(() => {
-          const newIndex = choiceIndex();
-          if (newIndex < chars.length - 1) return newIndex + 1;
-          return 0;
-        });
+        setIndex(choiceIndex());
       }, 50); //ルーレットの中身を切り替える速度
       return () => clearInterval(interval);
     }

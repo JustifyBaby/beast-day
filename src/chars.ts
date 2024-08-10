@@ -49,4 +49,10 @@ export const chars: Char[] = [
     imgSrc: "poop.jpg",
     voiceSrc: "poop.mp3",
   },
+  {
+    name: "21歳",
+    state: "拳で抵抗する",
+    imgSrc: "kobushi.jpg",
+    voiceSrc: "kobushi.mp3",
+  },
 ];

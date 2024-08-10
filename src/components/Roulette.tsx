@@ -23,7 +23,7 @@ export const Roulette = memo(() => {
     }
   }, [start]);
 
-  const voicing = (src: string) => new Audio(`/voice/${src}`).play();
+  const voicing = (src: string) => new Audio(`/beast-day/voice/${src}`).play();
 
   return (
     <div className='flex flex-col justify-center items-center'>
@@ -34,7 +34,7 @@ export const Roulette = memo(() => {
             <img
               width={300}
               height={300}
-              src={`/img/${imgSrc}`}
+              src={`/beast-day/img/${imgSrc}`}
               alt={name}
               className='p-2'
             />

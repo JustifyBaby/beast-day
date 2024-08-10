@@ -52,7 +52,7 @@ export const chars: Char[] = [
   {
     name: "21歳",
     state: "拳で抵抗する",
-    imgSrc: "kobushi.jpg",
+    imgSrc: "kobusi.jpg",
     voiceSrc: "kobushi.mp3",
   },
 ];

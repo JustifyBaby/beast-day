@@ -55,4 +55,10 @@ export const chars: Char[] = [
     imgSrc: "kobusi.jpg",
     voiceSrc: "kobushi.mp3",
   },
+  {
+    name: "けつあな確定",
+    state: "今日けつなあな確定な。",
+    imgSrc: "anal.jpg",
+    voiceSrc: "anal.mp3"
+  }
 ];
